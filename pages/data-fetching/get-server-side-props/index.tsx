@@ -1,27 +1,52 @@
+import { List, ListItem } from "@chakra-ui/react";
 import React from "react";
 
-interface Users {
+interface User {
+  id: number;
   name: string;
-  age: number;
+  username: string;
+  email: string;
+  address: {
+    street: string;
+    suite: string;
+    city: string;
+    zipcode: string;
+    geo: {
+      lat: string;
+      lng: string;
+    };
+  };
+  phone: string;
+  website: string;
+  company: {
+    name: string;
+    catchPhrase: string;
+    bs: string;
+  };
 }
-
 interface Props {
-  users: Users[];
+  users: User[];
 }
 
 const ServerSideProps = ({ users }: Props) => {
-  const style = {
-    padding: "2px 16px",
-    margin: "20px 10px",
-  };
   return (
-    <>
+    <List maxW="container.lg" mx="auto">
       {users.map((user, index) => (
-        <div style={style} key={index}>
-          Name: {user.name} - Age: {user.age}
-        </div>
+        <ListItem
+          key={index}
+          _hover={{
+            borderLeft: "8px",
+            borderColor: "blue",
+          }}
+          p="1rem"
+          my="0.25rem"
+          border="1px"
+          borderColor="gray.300"
+        >
+          + {index} - {user.name}
+        </ListItem>
       ))}
-    </>
+    </List>
   );
 };
 

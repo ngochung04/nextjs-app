@@ -1,13 +1,4 @@
-import {
-  Flex,
-  Heading,
-  HStack,
-  List,
-  ListItem,
-  Text,
-  UnorderedList,
-  VStack,
-} from "@chakra-ui/react";
+import { Flex, Heading, Text } from "@chakra-ui/react";
 import type { NextPage } from "next";
 
 import Link from "next/link";
@@ -72,19 +63,17 @@ const data = [
 const Home: NextPage = () => {
   return (
     <Layout>
-      <h1 className={styles.title}>
-        Welcome to{" "}
-        <Heading
-          fontSize="8xl"
-          bgClip="text"
-          bgGradient="linear(to-r, blue, green)"
-        >
-          NextJS
-        </Heading>
-      </h1>
+      <Heading
+        textAlign="center"
+        fontSize="8xl"
+        bgClip="text"
+        bgGradient="linear(to-r, red.500, pink.500, blue.500)"
+      >
+        Welcome to NextJS
+      </Heading>
 
       <p className={styles.description}>
-        Get started by editing{" "}
+        Get started by editing
         <code className={styles.code}>pages/index.tsx</code>
       </p>
 
