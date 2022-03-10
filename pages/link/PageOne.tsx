@@ -1,7 +1,8 @@
 import React from "react";
+import Layout from "../../components/layout";
 
 const PageOne = () => {
-  return <div>PageOne</div>;
+  return <Layout>PageOne</Layout>;
 };
 
 export default PageOne;
