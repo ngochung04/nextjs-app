@@ -9,7 +9,7 @@ interface Props {
   users: Users[];
 }
 
-const StaticProps = ({ users }: Props) => {
+const ServerSideProps = ({ users }: Props) => {
   const style = {
     padding: "2px 16px",
     margin: "20px 10px",
@@ -25,9 +25,9 @@ const StaticProps = ({ users }: Props) => {
   );
 };
 
-export default StaticProps;
+export default ServerSideProps;
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const res = await fetch("http://jsonblob.com/api/951340660120895488");
   const data = await res.json();
   return {

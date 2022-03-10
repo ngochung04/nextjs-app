@@ -1,4 +1,5 @@
 import {
+  Flex,
   Heading,
   HStack,
   List,
@@ -8,11 +9,65 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
+
 import Link from "next/link";
+import Card from "../components/Card";
 import Layout from "../components/layout";
 import styles from "../styles/Home.module.css";
+
+const data = [
+  {
+    title: "Link",
+    data: [
+      {
+        name: "Link",
+        link: "/link",
+      },
+      {
+        name: "Page One",
+        link: "/link/PageOne",
+      },
+      {
+        name: "Page Two",
+        link: "/link/PageTwo",
+      },
+    ],
+  },
+  {
+    title: "Routing",
+    data: [
+      {
+        name: "Single",
+        link: "/routing/single/param",
+      },
+      {
+        name: "Multiple",
+        link: "/routing/multiple/param-1/param-2",
+      },
+      {
+        name: "Catch All",
+        link: "/routing/param-1/param-2/param-3",
+      },
+    ],
+  },
+  {
+    title: "Data Fetching",
+    data: [
+      {
+        name: "Get Static Props",
+        link: "/data-fetching/get-static-props",
+      },
+      {
+        name: "Get Static Path",
+        link: "/data-fetching/get-static-paths",
+      },
+      {
+        name: "Get Server Side Props",
+        link: "/data-fetching/get-server-side-props",
+      },
+    ],
+  },
+];
 
 const Home: NextPage = () => {
   return (
@@ -33,85 +88,11 @@ const Home: NextPage = () => {
         <code className={styles.code}>pages/index.tsx</code>
       </p>
 
-      <HStack justifyContent="center">
-        <div className={styles.card}>
-          <h2>Link &rarr;</h2>
-          <UnorderedList>
-            <ListItem
-              _hover={{
-                bgClip: "text",
-                bgGradient: "linear(to-r, pink, blue)",
-              }}
-              fontSize="lg"
-            >
-              <Link href="/link" passHref>
-                <a>Link</a>
-              </Link>
-            </ListItem>
-            <ListItem
-              _hover={{
-                bgClip: "text",
-                bgGradient: "linear(to-r, pink, blue)",
-              }}
-              fontSize="lg"
-            >
-              <Link href="/link/PageOne" passHref>
-                <a>PageOne</a>
-              </Link>
-            </ListItem>
-            <ListItem
-              _hover={{
-                bgClip: "text",
-                bgGradient: "linear(to-r, pink, blue)",
-              }}
-              fontSize="lg"
-            >
-              <Link href="/link/PageTwo" passHref>
-                <a>PageTwo</a>
-              </Link>
-            </ListItem>
-          </UnorderedList>
-        </div>
-
-        <div className={styles.card}>
-          <h2>Routing &rarr;</h2>
-          <UnorderedList>
-            <ListItem
-              _hover={{
-                bgClip: "text",
-                bgGradient: "linear(to-r, pink, blue)",
-              }}
-              fontSize="lg"
-            >
-              <Link href="/routing/single/param" passHref>
-                <a>Single</a>
-              </Link>
-            </ListItem>
-            <ListItem
-              _hover={{
-                bgClip: "text",
-                bgGradient: "linear(to-r, pink, blue)",
-              }}
-              fontSize="lg"
-            >
-              <Link href="/routing/multiple/param1/param2" passHref>
-                <a>Multiple</a>
-              </Link>
-            </ListItem>
-            <ListItem
-              _hover={{
-                bgClip: "text",
-                bgGradient: "linear(to-r, pink, blue)",
-              }}
-              fontSize="lg"
-            >
-              <Link href="/routing/param0/param1/param2" passHref>
-                <a>Catch All</a>
-              </Link>
-            </ListItem>
-          </UnorderedList>
-        </div>
-      </HStack>
+      <Flex>
+        {data.map((item, index) => (
+          <Card data={item.data} title={item.title} key={index} />
+        ))}
+      </Flex>
     </Layout>
   );
 };
