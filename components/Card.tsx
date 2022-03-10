@@ -14,7 +14,16 @@ interface CardProps {
 
 const Card = ({ title, data }: CardProps) => {
   return (
-    <Box borderRadius="1rem" boxShadow="xl" p="2rem" mx="1rem" w="25rem">
+    <Box
+      bg="white"
+      borderWidth="1px"
+      borderColor="gray.100"
+      borderRadius="1rem"
+      shadow="2xl"
+      p="2rem"
+      mx="1rem"
+      w="25rem"
+    >
       <Heading
         mb="1rem"
         as="h3"

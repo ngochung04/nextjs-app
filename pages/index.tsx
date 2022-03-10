@@ -1,7 +1,6 @@
-import { Flex, Heading, Text } from "@chakra-ui/react";
+import { Image, Box, Grid, GridItem, Heading } from "@chakra-ui/react";
 import type { NextPage } from "next";
-
-import Link from "next/link";
+// import Image from "next/image";
 import Card from "../components/Card";
 import Layout from "../components/layout";
 import styles from "../styles/Home.module.css";
@@ -58,6 +57,10 @@ const data = [
       },
     ],
   },
+  {
+    title: "Build in CSS Support",
+    data: [],
+  },
 ];
 
 const Home: NextPage = () => {
@@ -77,11 +80,41 @@ const Home: NextPage = () => {
         <code className={styles.code}>pages/index.tsx</code>
       </p>
 
-      <Flex>
+      <Grid templateColumns="repeat(3, 1fr)">
         {data.map((item, index) => (
-          <Card data={item.data} title={item.title} key={index} />
+          <GridItem w="100%" key={index} mb="2rem">
+            <Card data={item.data} title={item.title} />
+          </GridItem>
         ))}
-      </Flex>
+        <GridItem w="100%" mb="2rem">
+          <Box
+            bg="white"
+            borderWidth="1px"
+            borderColor="gray.100"
+            borderRadius="1rem"
+            shadow="2xl"
+            p="2rem"
+            mx="1rem"
+            w="25rem"
+          >
+            <Heading
+              mb="1rem"
+              as="h3"
+              bgClip="text"
+              bgGradient="linear(to-r, pink.300,  blue.500)"
+            >
+              Static File Serving 
+            </Heading>
+            <Image
+              mx="auto"
+              src="/nextjs-logo.png"
+              alt="IMG"
+              width={100}
+              height={100}
+            />
+          </Box>
+        </GridItem>
+      </Grid>
     </Layout>
   );
 };

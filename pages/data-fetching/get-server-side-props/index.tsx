@@ -1,4 +1,5 @@
 import { List, ListItem } from "@chakra-ui/react";
+import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import React from "react";
 
 interface User {
@@ -28,7 +29,9 @@ interface Props {
   users: User[];
 }
 
-const ServerSideProps = ({ users }: Props) => {
+const ServerSideProps = ({
+  users,
+}: Props & InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return (
     <List maxW="container.lg" mx="auto">
       {users.map((user, index) => (
@@ -52,7 +55,7 @@ const ServerSideProps = ({ users }: Props) => {
 
 export default ServerSideProps;
 
-export const getServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const res = await fetch("http://jsonblob.com/api/951340660120895488");
   const data = await res.json();
   return {
