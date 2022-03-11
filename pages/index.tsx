@@ -85,6 +85,10 @@ const data = [
         name: "Custom Server",
         link: "https://nextjs.org/docs/advanced-features/custom-server",
       },
+      {
+        name: "Custom Error Page",
+        link: "/custom/error-page-errrrrrr",
+      },
     ],
   },
   {
@@ -168,6 +172,7 @@ const Home: NextPage = () => {
           shadow="2xl"
           p="2rem"
           mx="1rem"
+          mb="2rem"
           w={cardResponse}
         >
           <Heading
@@ -179,6 +184,7 @@ const Home: NextPage = () => {
             Static File Serving
           </Heading>
           <Image
+            mb="-1.25rem"
             mx="auto"
             src="/nextjs-logo.png"
             alt="IMG"
