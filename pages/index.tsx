@@ -59,7 +59,16 @@ const data = [
   },
   {
     title: "Build-in CSS Support",
-    data: [],
+    data: [
+      {
+        name: "CSS Modules",
+        link: "/build-in-css-support/css-modules",
+      },
+      {
+        name: "CSS In JS",
+        link: "/build-in-css-support/css-in-js",
+      },
+    ],
   },
   {
     title: "Custom",
@@ -101,6 +110,15 @@ const data = [
       {
         name: "useSWR Dynamic Routes",
         link: "/use-swr/dynamic/1",
+      },
+    ],
+  },
+  {
+    title: "Environment Variables",
+    data: [
+      {
+        name: "Environment Variables",
+        link: "/env-variable",
       },
     ],
   },
