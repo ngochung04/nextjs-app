@@ -1,8 +1,6 @@
 import {
   Image,
   Box,
-  Grid,
-  GridItem,
   Heading,
   SimpleGrid,
 } from "@chakra-ui/react";
@@ -67,6 +65,23 @@ const data = [
   {
     title: "Build in CSS Support",
     data: [],
+  },
+  {
+    title: "Custom",
+    data: [
+      {
+        name: "Custom `App`",
+        link: "/custom/app",
+      },
+      {
+        name: "Custom `Document`",
+        link: "/custom/document",
+      },
+      {
+        name: "Custom `App`",
+        link: "/custom/app",
+      },
+    ],
   },
 ];
 

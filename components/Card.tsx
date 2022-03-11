@@ -29,7 +29,7 @@ const Card = ({ title, data }: CardProps) => {
         bgClip="text"
         bgGradient="linear(to-r, pink.300,  blue.500)"
       >
-        {title} &rarr;
+        {title}
       </Heading>
       <UnorderedList>
         {data.map((item, index) => (
