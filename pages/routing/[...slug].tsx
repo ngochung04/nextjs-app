@@ -5,7 +5,6 @@ import Layout from "../../components/layout";
 const CatchAllPage = () => {
   const router = useRouter();
   return (
-    <Layout>
       <Box
         p={4}
         display={{ md: "flex" }}
@@ -32,7 +31,6 @@ const CatchAllPage = () => {
           <Text my={2}>{JSON.stringify(router.query.slug)}</Text>
         </Stack>
       </Box>
-    </Layout>
   );
 };
 

@@ -65,7 +65,7 @@ const data = [
 
 const Home: NextPage = () => {
   return (
-    <Layout>
+    <>
       <Heading
         textAlign="center"
         fontSize="8xl"
@@ -103,7 +103,7 @@ const Home: NextPage = () => {
               bgClip="text"
               bgGradient="linear(to-r, pink.300,  blue.500)"
             >
-              Static File Serving 
+              Static File Serving
             </Heading>
             <Image
               mx="auto"
@@ -115,7 +115,7 @@ const Home: NextPage = () => {
           </Box>
         </GridItem>
       </Grid>
-    </Layout>
+    </>
   );
 };
 

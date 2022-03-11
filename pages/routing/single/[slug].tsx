@@ -5,7 +5,7 @@ import Layout from "../../../components/layout";
 const SingleParamPage = () => {
   const router = useRouter();
   return (
-    <Layout>
+    
       <Box
         p={4}
         display={{ md: "flex" }}
@@ -33,7 +33,6 @@ const SingleParamPage = () => {
           <Text my={2}>Param: {router.query.slug}</Text>
         </Stack>
       </Box>
-    </Layout>
   );
 };
 

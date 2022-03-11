@@ -1,11 +1,10 @@
 .container {
   display: flex;
-  min-height: 100vh;
+  min-height: 80vh;
   flex-direction: column;
 }
 
 .main {
-  min-height: 100vh;
   padding: 4rem 0;
   flex: 1;
   display: flex;
@@ -16,6 +15,10 @@
 
 .footer {
   flex: 1;
+}
+
+.header {
+  margin-bottom: 3rem;
 }
 
 .title a {
