@@ -98,12 +98,16 @@ const data = [
         name: "useSWR",
         link: "/use-swr",
       },
+      {
+        name: "useSWR Dynamic Routes",
+        link: "/use-swr/dynamic/1",
+      },
     ],
   },
 ];
 
 const cardResponse = {
-  base:"23rem",
+  base: "23rem",
   sm: "25rem",
   md: "25rem",
   lg: "27rem",

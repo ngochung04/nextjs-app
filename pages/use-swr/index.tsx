@@ -18,7 +18,7 @@ const UseSWR = () => {
     <List maxW="container.lg" mx="auto">
       <Heading as="h2">UseSWR</Heading>
       {data?.map((data, index) => (
-        <Link passHref href={`/use-swr/${data.id}`} key={index}>
+        <Link passHref href={`/use-swr/dynamic/${data.id}`} key={index}>
           <ListItem
             _hover={{
               borderLeft: "8px",
