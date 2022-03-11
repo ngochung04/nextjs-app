@@ -1,4 +1,4 @@
-import { Box, Stack, Text } from "@chakra-ui/react";
+import { Box, Divider, Link, Stack, Text } from "@chakra-ui/react";
 import Code from "../../components/Code";
 import React from "react";
 
@@ -28,9 +28,9 @@ const App = () => {
           Custom `App`
         </Text>
         <Text my={2}>
-          Next.js uses the <Code>`App`</Code> component to initialize pages. You can override
-          it and control the page initialization. Which allows you to do amazing
-          things like:
+          Next.js uses the <Code>`App`</Code> component to initialize pages. You
+          can override it and control the page initialization. Which allows you
+          to do amazing things like:
         </Text>
         <ul style={{ marginLeft: "1rem" }}>
           <li> Persisting layout between page changes</li>
@@ -40,7 +40,15 @@ const App = () => {
           <li> Add global CSS</li>
         </ul>
         <Text>
-          To override the default <Code>`App`</Code>, create the file <Code>`./pages/_app.js`</Code>
+          To override the default <Code>`App`</Code>, create the file{" "}
+          <Code>`./pages/_app.js`</Code>
+        </Text>
+        <Divider/>
+        <Text fontSize="2xl">
+          Source code: 
+          <Link mx="0.5rem" color="blue" textDecoration="underline" href="https://github.com/ngochung04/nextjs-app/blob/main/pages/_app.tsx">
+            Github
+          </Link>
         </Text>
       </Stack>
     </Box>
