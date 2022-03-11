@@ -9,7 +9,8 @@ const data: Data[] = [
   { id: 3, name: "Hùng 3", age: 22 },
   { id: 4, name: "Hùng 4", age: 20 },
   { id: 5, name: "Hùng 5", age: 25 },
-  { id: 6, name: "Hùng 6", age: 22 },
+  { id: 6, name: "Hùng 6", age: 22 }
+  
 ];
 
 export default data;

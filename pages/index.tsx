@@ -58,7 +58,7 @@ const data = [
     ],
   },
   {
-    title: "Build in CSS Support",
+    title: "Build-in CSS Support",
     data: [],
   },
   {
@@ -91,7 +91,24 @@ const data = [
       },
     ],
   },
+  {
+    title: "useSWR",
+    data: [
+      {
+        name: "useSWR",
+        link: "/use-swr",
+      },
+    ],
+  },
 ];
+
+const cardResponse = {
+  base:"23rem",
+  sm: "25rem",
+  md: "25rem",
+  lg: "27rem",
+  xl: "25rem",
+};
 
 const Home: NextPage = () => {
   return (
@@ -105,14 +122,19 @@ const Home: NextPage = () => {
         Welcome to NextJS
       </Heading>
 
+      {/* Build-in CSS support */}
       <p className={styles.description}>
         Get started by editing
         <code className={styles.code}>pages/index.tsx</code>
       </p>
 
-      <SimpleGrid minChildWidth="25rem" spacing={6} justifyItems="center">
+      <SimpleGrid
+        minChildWidth={cardResponse}
+        spacing={6}
+        justifyItems="center"
+      >
         {data.map((item, index) => (
-          <Box key={index} mb="2rem">
+          <Box key={index} mb="2rem" w={cardResponse}>
             <Card data={item.data} title={item.title} />
           </Box>
         ))}
@@ -124,7 +146,7 @@ const Home: NextPage = () => {
           shadow="2xl"
           p="2rem"
           mx="1rem"
-          w="25rem"
+          w={cardResponse}
         >
           <Heading
             mb="1rem"

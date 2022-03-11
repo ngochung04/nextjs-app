@@ -29,9 +29,7 @@ interface Props {
   users: User[];
 }
 
-const ServerSideProps = ({
-  users,
-}: Props & InferGetServerSidePropsType<typeof getServerSideProps>) => {
+const ServerSideProps = ({ users }: Props) => {
   return (
     <List maxW="container.lg" mx="auto">
       <Heading as="h2">getServerSideProps</Heading>

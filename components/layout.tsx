@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import styles from "../styles/Home.module.css";
 
@@ -39,9 +40,11 @@ const Layout = ({ children, title = "Next App" }: Props) => {
           color="white"
         >
           <Flex align="center" mr={5}>
-            <Heading as="h1" size="lg" letterSpacing={"tighter"}>
-              Chakra UI
-            </Heading>
+            <Link passHref href="/">
+              <Heading as="a" size="lg" letterSpacing={"tighter"}>
+                Chakra UI
+              </Heading>
+            </Link>
           </Flex>
         </Flex>
       </header>

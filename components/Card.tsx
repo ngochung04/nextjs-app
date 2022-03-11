@@ -21,7 +21,7 @@ const Card = ({ title, data }: CardProps) => {
       borderRadius="1rem"
       shadow="2xl"
       p="2rem"
-      w="25rem"
+      w="100%"
     >
       <Heading
         mb="1rem"
