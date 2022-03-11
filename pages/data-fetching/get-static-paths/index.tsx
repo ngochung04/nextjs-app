@@ -1,4 +1,4 @@
-import { List, ListItem, UnorderedList } from "@chakra-ui/react";
+import { Heading, List, ListItem, UnorderedList } from "@chakra-ui/react";
 import React from "react";
 import NextLink from "next/link";
 
@@ -32,6 +32,8 @@ interface Props {
 const StaticProps = ({ users }: Props) => {
   return (
     <List maxW="container.lg" mx="auto">
+      <Heading as="h2">getStaticPaths</Heading>
+
       {users.map((user, index) => (
         <NextLink
           passHref

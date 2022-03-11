@@ -1,4 +1,4 @@
-import { List, ListItem } from "@chakra-ui/react";
+import { Heading, List, ListItem } from "@chakra-ui/react";
 import React from "react";
 import NextLink from "next/link";
 interface User {
@@ -31,6 +31,8 @@ interface Props {
 const StaticProps = ({ users }: Props) => {
   return (
     <List maxW="container.lg" mx="auto">
+      <Heading as="h2">getStaticProps</Heading>
+
       {users.map((user, index) => (
         <ListItem
           key={index}

@@ -1,4 +1,4 @@
-import { List, ListItem } from "@chakra-ui/react";
+import { Heading, List, ListItem, Text } from "@chakra-ui/react";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import React from "react";
 
@@ -34,6 +34,7 @@ const ServerSideProps = ({
 }: Props & InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return (
     <List maxW="container.lg" mx="auto">
+      <Heading as="h2">getServerSideProps</Heading>
       {users.map((user, index) => (
         <ListItem
           key={index}
@@ -56,7 +57,9 @@ const ServerSideProps = ({
 export default ServerSideProps;
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const res = await fetch("https://mocki.io/v1/c867f756-d32c-43c0-ad0e-722fdf244a35");
+  const res = await fetch(
+    "https://mocki.io/v1/c867f756-d32c-43c0-ad0e-722fdf244a35"
+  );
   const data = await res.json();
   return {
     props: {
