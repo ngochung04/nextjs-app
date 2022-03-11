@@ -56,7 +56,7 @@ const ServerSideProps = ({
 export default ServerSideProps;
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const res = await fetch("http://jsonblob.com/api/951340660120895488");
+  const res = await fetch("https://mocki.io/v1/c867f756-d32c-43c0-ad0e-722fdf244a35");
   const data = await res.json();
   return {
     props: {
