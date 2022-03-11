@@ -1,4 +1,11 @@
-import { Image, Box, Grid, GridItem, Heading } from "@chakra-ui/react";
+import {
+  Image,
+  Box,
+  Grid,
+  GridItem,
+  Heading,
+  SimpleGrid,
+} from "@chakra-ui/react";
 import type { NextPage } from "next";
 // import Image from "next/image";
 import Card from "../components/Card";
@@ -80,13 +87,12 @@ const Home: NextPage = () => {
         <code className={styles.code}>pages/index.tsx</code>
       </p>
 
-      <Grid templateColumns="repeat(3, 1fr)">
+      <SimpleGrid minChildWidth="25rem" spacing={6} justifyItems="center">
         {data.map((item, index) => (
-          <GridItem w="100%" key={index} mb="2rem">
+          <Box key={index} mb="2rem">
             <Card data={item.data} title={item.title} />
-          </GridItem>
+          </Box>
         ))}
-        <GridItem w="100%" mb="2rem">
           <Box
             bg="white"
             borderWidth="1px"
@@ -113,8 +119,7 @@ const Home: NextPage = () => {
               height={100}
             />
           </Box>
-        </GridItem>
-      </Grid>
+      </SimpleGrid>
     </>
   );
 };
