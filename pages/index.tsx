@@ -78,8 +78,8 @@ const data = [
         link: "/custom/document",
       },
       {
-        name: "Custom `App`",
-        link: "/custom/app",
+        name: "Custom Server",
+        link: "https://nextjs.org/docs/advanced-features/custom-server",
       },
     ],
   },
